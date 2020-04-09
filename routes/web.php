@@ -25,3 +25,4 @@ Route::get('/', function () {
 
 Route::view('/login', 'landingComponents.login');
 Route::post('/ulogin', 'userLoginController@login');
+Route::view('/admin', 'adminView.adminLayout');
