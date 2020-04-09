@@ -49661,13 +49661,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! C:\xampp\htdocs\Prefectura\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Prefectura\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! c:\laragon\www\Prefectura\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\laragon\www\Prefectura\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> 49dce737759b2e227243d181acb3d7db3e1b2da5
+__webpack_require__(/*! C:\laragon\www\Prefectura\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\Prefectura\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

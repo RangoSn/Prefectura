@@ -18,14 +18,10 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 
-Auth::routes();
-
-Route::middleware('auth')->group(function(){
- Route::view('/','index')->name('index'); 
-
-
-Route::get('firebase','FirebaseController@index');
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', function () {
+    return view('landingComponents.carousel');
 });
-Route::post('register', 'Aut\RegisterController@create');
+
+
+Route::view('/login', 'landingComponents.login');
+Route::post('/ulogin', 'userLoginController@login');
