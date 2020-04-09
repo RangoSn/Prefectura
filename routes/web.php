@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('landingComponents.carousel');
+    return view('landingComponents.ilbLanding');
 });
 
 
