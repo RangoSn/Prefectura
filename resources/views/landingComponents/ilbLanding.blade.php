@@ -1,5 +1,5 @@
 @extends('landing')
-@section('title','titulo')
+@section('title')
 @section('mycontent')
 <!--Carrusel-->
 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">

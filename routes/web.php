@@ -21,8 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landingComponents.ilbLanding');
 });
-
+Route::get('/admin', function () {
+    return view('landingComponents.adminView.adminLayout');
+});
 
 Route::view('/login', 'landingComponents.login');
 Route::post('/ulogin', 'userLoginController@login');
-Route::view('/admin', 'adminView.adminLayout');
