@@ -27,4 +27,5 @@ Route::get('/dashboard', function () {
 
 
 Route::view('/login', 'landingComponents.login');
+Route::view('/dashboard', 'adminComponents.dashboard');
 Route::post('/ulogin', 'userLoginController@login');
