@@ -29,3 +29,6 @@ Route::get('/dashboard', function () {
 Route::view('/login', 'landingComponents.login');
 Route::view('/dashboard', 'adminComponents.dashboard');
 Route::post('/ulogin', 'userLoginController@login');
+//import 
+Route::get('/import','loadFileController@importFile');
+Route::post('/import','loadFileController@importExcel');
