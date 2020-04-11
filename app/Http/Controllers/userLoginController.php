@@ -25,14 +25,11 @@ class userLoginController extends Controller
     }
     
     public function login(Request $request){
-        $email = $request->input('email');
-        $password = $request->input('password');
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'./firebasekey.json');
-        $firebase = (new Factory)
-        ->withServiceAccount($serviceAccount)
-        ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
-        ->create();
-        $auth = $firebase->getAuth()->singInWithEmailAndPassword($email,$password);
+        if($request->ajax()){
+            return response()->json([
+                "mensaje" => $request->all()
+            ]);
+        }
     }
 
 
