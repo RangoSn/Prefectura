@@ -10,27 +10,24 @@ use Kreait\Firebase\Auth;
 
 
 class userLoginController extends Controller
-{
-    //
-    protected $firebase;
-    protected $auth;
-
-    public function index()
-    {
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'./firebasekey.json');
-        $firebase = (new Factory)
-        ->withServiceAccount($serviceAccount)
-        ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
-        ->create();
-    }
-    
+{    
     public function login(Request $request){
-        if($request->ajax()){
-            return response()->json([
-                "mensaje" => $request->all()
-            ]);
+        $email = $request->input('email');
+        $password = $request->input('password');
+        try{
+            $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'./firebasekey.json');
+            $firebase = (new Factory)
+            ->withServiceAccount($serviceAccount)
+            ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
+            ->create();
+            $mappedUser = $firebase->getAuth()->verifyPassword($email,$password);
+        }catch(Kreait\Firebase\Exception\Auth\InvalidPassword $e){
+            print_r("kk");        
         }
+        //firebase
+        
+        
+        print_r($mappedUser);        
     }
-
 
 }
