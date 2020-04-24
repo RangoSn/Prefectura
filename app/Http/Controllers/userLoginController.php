@@ -7,6 +7,8 @@ use Kreait\Firebase;
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Auth;
+use Kreait\Firebase\Exception\Auth\UserNotFound;
+use Kreait\Firebase\Exception\Auth\InvalidPassword;
 
 
 class userLoginController extends Controller
@@ -20,14 +22,21 @@ class userLoginController extends Controller
             ->withServiceAccount($serviceAccount)
             ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
             ->create();
-            $mappedUser = $firebase->getAuth()->verifyPassword($email,$password);
-        }catch(Kreait\Firebase\Exception\Auth\InvalidPassword $e){
-            print_r("kk");        
+             $firebase->getAuth()->getUserByEmail($email);
+             $firebase->getAuth()->verifyPassword($email,$password);
+            $user = $firebase->getAuth()->getUserByEmail($email);
+            if($user!= null){
+                /**$uid=$user->uid;
+                $firebase->getAuth()->disableUser($uid);**/
+                return redirect("/dashboard");
+            }
+            
+        }catch(UserNotFound $e){
+            $EmailError = "Email no existente en la plataforma";
+            return redirect("/login")->with("toast_warning", $EmailError);
+        }catch(InvalidPassword $e){
+            $PasswordError = "Contraseña invalida";
+            return redirect("/login")->with("toast_warning", $PasswordError);
         }
-        //firebase
-        
-        
-        print_r($mappedUser);        
     }
-
 }

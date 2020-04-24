@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +26,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('adminComponents.dashboard');
 });
-
-
 Route::view('/login', 'landingComponents.login');
-Route::view('/dashboard', 'adminComponents.dashboard');
-Route::post('/ulogin', 'userLoginController@login');
+//Route::view('/dashboard', 'adminComponents.dashboard');
+Route::post('/dashboard', 'userLoginController@login');
 //import 
 Route::get('/import','loadFileController@importFile');
 Route::post('/import','loadFileController@importExcel');
