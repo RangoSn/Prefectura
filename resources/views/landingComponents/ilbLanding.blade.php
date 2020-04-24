@@ -32,37 +32,17 @@
     </div>
     
     <div class="col-md-12">
-      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illo eligendi quod ratione explicabo obcaecati. Possimus voluptatum quo laboriosam animi, sequi esse autem soluta! Ratione sint quasi odio velit? Ab.</p> 
+      <p class="text-justify"> La aplicacion sirve para la carga de Horarios del personal docente, que será utilizada por el área de prefectura para el manejo de asistencias.</p> 
     </div>   
                
     <div class="row">
-      <div class="col-3">Visión</div>
+      <div class="col-3">Disponible</div>
         <div class="col-9 text-justify">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea veritatis quae illum odit ab necessitatibus, quis deleniti dolorem et. Debitis et corrupti commodi labore culpa laborum recusandae minus aperiam saepe.<br><br>
+          <p> Disponible para Dispositivos Android.<br><br>
           </p>
         </div>
       </div>
          
-  <div class="row">
-    <div class="col-3">Misión</div>
-      <div class="col-9 text-justify" >
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea veritatis quae illum odit ab necessitatibus, quis deleniti dolorem et. Debitis et corrupti commodi labore culpa laborum recusandae minus aperiam saepe.<br><br>
-        </p>
-      </div>
-    </div>
-  
-      
-  <div class="row">
-    <div class="col-3">Valores</div>
-      <div class="col-9 text-justify" >
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea veritatis quae illum odit ab necessitatibus, quis deleniti dolorem et. Debitis et corrupti commodi labore culpa laborum recusandae minus aperiam saepe.<br><br>
-        </p>
-    </div>
-  </div> 
-</div>
-</div>
-
-
 <!--Galeria-->
 <div class="row" >
         <div class="col col-lg-12">
