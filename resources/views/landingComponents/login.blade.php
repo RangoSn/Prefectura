@@ -8,7 +8,7 @@
       <div class="row">
          <div class="col-md-4 mx-auto">
             <div class="form ">
-               <form id="formLogin" method="POST" data-parsley-validate="" action="/ulogin">                    
+               <form id="formLogin" method="POST" data-parsley-validate="" action="/dashboard">                    
                @csrf
                <div class="form-group">
                      <input type="email" name="email" id="email" class="form-control inputLogin" placeholder="Email" required="">
