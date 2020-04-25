@@ -17,6 +17,10 @@ html{
 .contentLanding{
   margin-block-start: 85px;
 }
+p{
+  
+  font-family: 'Karla', sans-serif;
+}
 /*Media Queries*/
 
 @media only screen and (min-width: 1200px) and (max-width:1440px){
