@@ -10,9 +10,6 @@
 </body>
 <footer>
 </footer>
-</html>
-
 <!-- AdminLTE App -->
 <script src="admin/dist/js/adminlte.min.js"></script>
-</body>
 </html>
