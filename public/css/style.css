@@ -17,9 +17,10 @@ html{
 .contentLanding{
   margin-block-start: 85px;
 }
-p{
+p, h1, h3{
   
   font-family: 'Karla', sans-serif;
+    color: #fff;
 }
 /*Media Queries*/
 
@@ -60,5 +61,5 @@ p{
   background: #ea4335 !important;
   }
 p{
-  color: #fff;
+  font-size: 20px;  
 }

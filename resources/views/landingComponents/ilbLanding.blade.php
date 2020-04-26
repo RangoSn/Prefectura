@@ -23,26 +23,39 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<br>
+<br>
 <!--Quiénes somos-->
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <p class="text-justify">¿QUIENES SOMOS?</p>
-    </div>
-    
-    <div class="col-md-12">
-      <p class="text-justify"> La aplicacion sirve para la carga de Horarios del personal docente, que será utilizada por el área de prefectura para el manejo de asistencias.</p> 
-    </div>   
-               
     <div class="row">
-      <div class="col-3">Disponible</div>
-        <div class="col-9 text-justify">
-          <p> Disponible para Dispositivos Android.<br><br>
-          </p>
+        <div class="col-md-12">
+            <h1>¿Que ofrece esta aplicación?</h1>
         </div>
-      </div>
-         
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-justify">Esta aplicación busca ser una herramienta que otorgue resultados de las asistencias, retardos o inasistencias de los docentes. </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h3>La aplicación web.</h3>
+        </div>
+        <div class="col-md-9">
+            <p class="text-justify">Es dirigida para los usuarios de la coordinación general del Instituto Leonardo Bravo plantel centro, integrando funcionalidades para la gestión de horarios a través de la carga de archivos excel, además su principal objetivo será mostrar los resultados en una interfaz sencilla y con datos en tiempo real.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h3>La aplicación móvil.</h3>
+        </div>
+        <div class="col-md-9">
+            <p class="text-justify">Es dirigida al personal de docencia y prefectura, con el objetivo de realizar y validar el pase de asistencia dentro del Instituto Leonardo Bravo plantel centro.</p>
+        </div>
+    </div>            
+</div>
+<br>
+<br>
 <!--Galeria-->
 <div class="row" >
         <div class="col col-lg-12">
