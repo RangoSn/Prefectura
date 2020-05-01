@@ -32,3 +32,4 @@ Route::post('/dashboard', 'userLoginController@login');
 //import 
 Route::get('/import','loadFileController@importFile');
 Route::post('/import','loadFileController@importExcel');
+Route::view('/legals', 'legalsComponents.terminosPoliticas');
