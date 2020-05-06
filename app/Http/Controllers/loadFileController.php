@@ -15,7 +15,7 @@ use Validator;
 class loadFileController extends Controller
 {
     public function importfile(){
-        return view('loadFile');
+        return view('loadFileComponents.formulario');
     }
     
     public function importExcel (Request $request){
