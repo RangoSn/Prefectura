@@ -1,6 +1,8 @@
 @extends('loadFile')
 @section('mycontent')
     <form action="{{ url('/import')}}" method="post" enctype="multipart/form-data">
+    
+   {{csrf_field()}}
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -9,6 +11,8 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Formulario</li>
             </ol>
           </div>
         </div>
@@ -41,6 +45,8 @@
                   <br><br><br>
                  <a href="{{url('/sample/ejemplo.xlsx')}}">Download Simple File</a>
                 </div>
+                  
+                </form>
 
 @endsection
 

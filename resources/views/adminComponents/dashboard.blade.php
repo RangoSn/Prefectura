@@ -1,6 +1,4 @@
-@extends('adminLayout')
-@section('title')
-@section('mycontent')
+
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -286,5 +284,6 @@
     </div>
   </aside>
 </div>
+
 
 @endsection

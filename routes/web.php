@@ -29,6 +29,7 @@ Route::get('/dashboard', function () {
 
 Route::view('/import', 'loadFileComponents.formulario')->name('formulario');
 
+
 Route::view('/login', 'landingComponents.login');
 //Route::view('/dashboard', 'adminComponents.dashboard');
 Route::post('/dashboard', 'userLoginController@login');
