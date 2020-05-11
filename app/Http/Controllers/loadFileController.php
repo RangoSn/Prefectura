@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 use App\Imports\ExcelImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Maatwebsite\Excel\HeadingRowImport;
-use Kreait\Firebase;
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\ServiceAccount;
 use Validator;
+//arrays in laravel
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 
 
 class loadFileController extends Controller
@@ -30,8 +30,9 @@ class loadFileController extends Controller
             $savePath=public_path('/upload/');//Inicializa el path donde se guarde el archivo.
             $file->move($savePath,$fileName);//Guarda el archivo en la carpeta.
             $saveFile=$savePath . $fileName;
-            $json=$this->jsonExcel($saveFile);
-            //$this->addJSON($json);
+            set_time_limit(0);//Evita el error de muchas peticiones
+            $this->jsonExcel($saveFile);
+            print("upload successfully");
         }
     }
     
@@ -40,43 +41,60 @@ class loadFileController extends Controller
         $import= new ExcelImport;
         //Importar a la base de datos directamente Excel::import(new ExcelImport, $file);
         $array = Excel::toArray($import, $file);
-        
-        for($i=0;$i<count($array[0]);$i++){ 
-            $curso = $array[0][$i]["course_name"];
-            $materia = $array[0][$i]["section_number"];
-            $teacher = $array[0][$i]["teacher_number"];
-            $expression = $array[0][$i]["expression"];
-            /**
-            $json="[
-            'curso'=>$curso,
-            'materia'=>$materia,
-            'teacher'=>$teacher,
-            'expression'=>$expression]";
-            $jsonAux=$json ;
-            **/
-            $this->addJSON($curso ,$materia ,$teacher ,$expression);
-            }
-        //print_r($array[0]->expression);
-        //$json=json_encode($array,JSON_UNESCAPED_UNICODE);
-        //print_r($array[0][0]["expression"]);
-        //print_r($array[0][1]);
-        print("COOL :V");
-        //return $json;
+        //obtener maestros
+        $maestros = Arr::pluck($array[0], 'teacher_number');
+        //cuenta los maestros
+        $maestro=array_count_values($maestros);
+        //obtiene arrglo de los maestros
+        $master = array_keys($maestro);
+        for($i=0;$i<count($master);++$i){
+                $this->addJSON([$master[$i]=>['materias'=>$this->getMaterias($master[$i],$array)]]);
+        }
     }
-    public function addJSON ($curso, $materia, $teacher,$expression){
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'./firebasekey.json');
-        $firebase = (new Factory)
-        ->withServiceAccount($serviceAccount)
-        ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
-        ->create();
+  
+    private function getMaterias($masterName, $array){
+        for($i=0;$i<count($array[0]);++$i){
+            if($i==0){
+                if ($array[0][$i]['teacher_number'] == $masterName){    
+                    $curso=str_replace(".","",$array[0][$i]['course_name']);
+                    $this->addMaterias([ $curso=>[
+                      'grupo'=>$array[0][$i]['section_number'],
+                      'expresion'=>$array[0][$i]['expression'],
+                      'valMaestro'=>0,
+                      'valPrefecto'=>0,
+                      'asistencias'=>0,
+                      'faltas'=>0,]
+                     ],$array[0][$i]['teacher_number']);
+                }    
+            }else{
+                 if ($array[0][$i]['teacher_number'] == $masterName){
+                     $curso=str_replace(".","",$array[0][$i]['course_name']);
+                    $this->addMaterias([ $curso=>[
+                      'grupo'=>$array[0][$i]['section_number'],
+                      'expresion'=>$array[0][$i]['expression'],
+                      'valMaestro'=>0,
+                      'valPrefecto'=>0,
+                      'asistencias'=>0,
+                      'faltas'=>0,]
+                     ],$array[0][$i]['teacher_number']);
+                }
+            }
+            
+        }
+    }
+    private function addMaterias( $array, $reference){
+        $firebase = app('firebase');
         $database = $firebase->getDatabase();
         $newPost = $database
-        ->getReference('horario')
-        ->push([
-            'curso'=>$curso,
-            'materia'=>$materia,
-            'teacher'=>$teacher,
-            'expression'=>$expression
-        ]);
+        ->getReference("maestros/".$reference)
+        ->push($array);
+    }
+    private function addJson( $array){
+        $firebase = app('firebase');
+        $database = $firebase->getDatabase();
+        $newPost = $database
+        ->getReference("maestros")
+        ->push($array);
+        
     }
 }

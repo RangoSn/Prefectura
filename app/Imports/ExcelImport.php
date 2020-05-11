@@ -16,11 +16,11 @@ class ExcelImport implements ToModel, WithHeadingRow
     */
     public function model(array $row)
     {
-        return new Excel(['horario'=>[
+        return new Excel([
            'Course_Name' => $row['course_name'],
            'Section_Number' => $row['section_number'], 
            'Teacher Number' => $row['teacher_number'],
-           'Expression' => $row['expression'],
-        ]]);
+           'Expression' => $row['expression']
+        ]);
     }
 }
