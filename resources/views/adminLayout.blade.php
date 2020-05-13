@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('adminComponents.header')
-<body class="Landing hold-transition sidebar-mini" style="background-image: url('img/fondo.png');">
+<body class="Landing hold-transition sidebar-mini>
 
   <div class="contentLanding">
     @yield('mycontent') 
