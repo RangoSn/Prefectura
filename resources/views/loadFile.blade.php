@@ -4,8 +4,8 @@
 <body class="Landing hold-transition sidebar-mini">
   <div class="wrapper">  
     <div class="headerLanding">
-    @include('loadFileComponents.NavBar')
-    @include('loadFileComponents.Sidebar')
+    @include('i0.NavBar')
+    @include('i0.Sidebar')
     </div>  
     <div class="contentLanding">
       @yield('mycontent') 
@@ -13,7 +13,7 @@
     @include('sweetalert::alert')
 </body>
 <footer>
-  @include('loadFileComponents.footer')
+  @include('i0.footer')
 </footer>
 <!-- bs-custom-file-input -->
 <script src="admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
