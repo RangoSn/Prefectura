@@ -10,14 +10,14 @@
     <div class="contentLanding">
       @yield('mycontent') 
     </div>
-    @include('sweetalert::alert')
+  </div>
+  @include('sweetalert::alert')
 </body>
 <footer>
   @include('i0.footer')
 </footer>
 <!-- bs-custom-file-input -->
 <script src="admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-
 <!-- AdminLTE App -->
 <script src="admin/dist/js/adminlte.min.js"></script>
 <script type="text/javascript">
