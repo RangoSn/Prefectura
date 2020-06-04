@@ -26,7 +26,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('adminComponents.dashboard');
 });
-
+Route::get('/detailsAcademy', function () {
+    return view('detailsAcademy.detailsAcademy');
+});
 Route::view('/import', 'loadFileComponents.formulario')->name('formulario');
 
 
