@@ -17,7 +17,7 @@ class userLoginController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         try{
-            $serviceAccount = ServiceAccount::fromJsonFile('app/Http/Controllers/firebasekey.json');
+            $serviceAccount = ServiceAccount::fromJson('./firebasekey.json');
             $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
             ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
