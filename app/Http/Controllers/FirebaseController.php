@@ -15,7 +15,7 @@ class FirebaseController extends Controller
      */
     public function index()
     {
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'./firebasekey.json');
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'firebasekey.json');
         $firebase = (new Factory)
         ->withServiceAccount($serviceAccount)
         ->withDatabaseUri('https://prefectura-ilb.firebaseio.com/')
