@@ -31,7 +31,7 @@ class FirebaseServiceProvider extends ServiceProvider
             "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
             "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gs1fh%40prefectura-ilb.iam.gserviceaccount.com"
         }
-        ';
+        '; 
           $serviceAccount = ServiceAccount::fromJson($SA);
           return (new Factory)
         ->withServiceAccount($serviceAccount)

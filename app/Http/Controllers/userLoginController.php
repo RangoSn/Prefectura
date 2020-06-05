@@ -50,6 +50,9 @@ class userLoginController extends Controller
         }catch(InvalidPassword $e){
             $PasswordError = "Contraseña invalida";
             return redirect("/login")->with("toast_warning", $PasswordError);
+        }catch(InvalidArgumentException $e){
+            $PasswordError = "Contraseña invalida";
+            return redirect("/login")->with("toast_warning", $PasswordError);
         }
     }
 }
