@@ -9,6 +9,7 @@ use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Auth;
 use Kreait\Firebase\Exception\Auth\UserNotFound;
 use Kreait\Firebase\Exception\Auth\InvalidPassword;
+use Kreait\Firebase\Exception\InvalidArgumentException;
 
 
 class userLoginController extends Controller
