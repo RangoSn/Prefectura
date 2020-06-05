@@ -25,8 +25,7 @@ class userLoginController extends Controller
                 /**$uid=$user->uid;
                 $firebase->getAuth()->disableUser($uid);**/
                 return redirect("/dashboard");
-            }
-            
+            }            
         }catch(UserNotFound $e){
             $EmailError = "Email no existente en la plataforma";
             return redirect("/login")->with("toast_warning", $EmailError);
