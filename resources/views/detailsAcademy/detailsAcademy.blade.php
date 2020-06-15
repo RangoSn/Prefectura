@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Horario</h1>
+            <h1 class="m-0 text-dark">Asistencias de academía</h1>
           </div><!-- /.col -->
       
         </div><!-- /.row -->
@@ -21,111 +21,79 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"> Vespertino</h3>
+              <h3 class="card-title"></h3>
             </div>
             <!-- /.card-header TABLA -->
             <div class="card-body">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Hora</th>
                   <th>Profesor</th>
                   <th>Materia</th>
-                  <th>Grupo</th>
-                  <th>Salón</th>
+                  <th>Asistencias</th>
+                  <th>Faltas</th>
+                  <th>Retardos</th>
                 </tr>
                 </thead>
                 <tbody>
           
-                <tr>
-                  <td>7:00</td>
-                  <td>Fernando</td>
+                <tr>                  
+                  <td>González Lemus Fernando</td>
                   <td>Seguridad</td>
-                  <td>1501-LI</td>
-                  <td>i-8</td>
+                  <td>10</td>
+                  <td>0</td>
+                  <td>0</td>
                 </tr>
                 <tr>
-                  <td>8:00</td>
-                  <td>Camila</td>
-                  <td>Multimedia</td>
-                  <td>1101-LI</td>
-                  <td>i-1</td>
-                </tr>
-                <tr>
-                  <td>9:00</td>
-                  <td>Alejandro</td>
-                  <td>OSX.3+</td>
-                  <td>1.8</td>
-                  <td>i-2</td>
-                </tr>
-            
-                <tr>
-                  <td>10:00</td>
-                  <td>Ana</td>
-                  <td>Win 95+ / OSX.1+</td>
+                  <td>Sedas Suárez Silvia Jassel</td>
+                  <td>Arquitectura de las organizaciones</td>
+                  <td>9</td>
                   <td>1</td>
-                  <td>i-3</td>
+                  <td>0</td>
                 </tr>
                 <tr>
-                  <td>11:00</td>
-                  <td>Paulina</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.1</td>
-                  <td>i-5</td>
+                  <td>Ochoa Toledo Miguel Angel</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
                 </tr>
                 <tr>
-                  <td>12:00</td>
-                  <td>Tania</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.2</td>
-                  <td>i-2</td>
+                  <td>Canto Gallo Rafael</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
                 </tr>
                 <tr>
-                  <td>13:00</td>
-                  <td>Mozilla 1.3</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.3</td>
-                  <td>i-1</td>
-                </tr>
+                  <td>Nolasco Sánchez Araceli Adriana</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>            
                 <tr>
-                  <td>14:00</td>
-                  <td>Mozilla 1.4</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.4</td>
-                  <td>i-8</td>
-                </tr>
+                  <td>Rosales Galicia Miguel Ángel</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>                
                 <tr>
-                  <td>15:00</td>
-                  <td>Mozilla 1.5</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.5</td>
-                  <td>i-7</td>
-                </tr>
+                  <td>González Gordillo Jaime</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>                
                 <tr>
-                  <td>16:00</td>
-                  <td>Mozilla 1.6</td>
-                  <td>Win 95+ / OSX.1+</td>
-                  <td>1.6</td>
-                  <td>i-9</td>
-                </tr>
-                <tr>
-                  <td>17:00</td>
-                  <td>Mozilla 1.7</td>
-                  <td>Win 98+ / OSX.1+</td>
-                  <td>1.7</td>
-                  <td>i-7</td>
-                </tr>
-                <tr> 
+                  <td>García Luna Mario</td>
+                  <td>Modelos de gestión</td>
+                  <td>5</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>                
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Hora</th>
-                  <th>Profesor</th>
-                  <th>Materia</th>
-                  <th>Grupo</th>
-                  <th>Salón</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.card-body -->
