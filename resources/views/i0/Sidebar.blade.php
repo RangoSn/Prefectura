@@ -54,9 +54,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
-              <p>FAQ's</p>
+              <p>Cerrar sesión</p>
             </a>
           </li>
         </ul>
