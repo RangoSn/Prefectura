@@ -32,7 +32,8 @@ class loadFileController extends Controller
             $saveFile=$savePath . $fileName;
             set_time_limit(0);//Evita el error de muchas peticiones
             $this->jsonExcel($saveFile);
-            print("upload successfully");
+            $FileSuccesfull = "Archivo cargado";
+            return redirect("/import")->with("toast_success", $FileSuccesfull);
         }
     }
     
