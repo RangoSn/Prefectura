@@ -33,7 +33,7 @@ class loadFileController extends Controller
             set_time_limit(0);//Evita el error de muchas peticiones
             $this->jsonExcel($saveFile);
             $FileSuccesfull = "Archivo cargado";
-            return redirect("/import")->with("toast_success", $FileSuccesfull);
+            return redirect("/dashboard")->with("toast_success", $FileSuccesfull);
         }
     }
     
