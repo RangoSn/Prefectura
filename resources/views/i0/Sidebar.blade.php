@@ -39,7 +39,7 @@
               </p>
             </a>
           </li>
-         
+         <!--
           <li class="nav-header">Legales</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -53,6 +53,18 @@
               <p>Terminos y condiciones.</p>
             </a>
           </li>
+          -->
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
           <li class="nav-item">
             <a href="/" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
