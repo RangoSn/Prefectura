@@ -60,35 +60,35 @@
                 </tr>
                 <tr>
                   <td>Canto Gallo Rafael</td>
-                  <td>Modelos de gestión</td>
+                  <td>Programación orientada a objetos.</td>
                   <td>5</td>
                   <td>2</td>
                   <td>3</td>
                 </tr>
                 <tr>
                   <td>Nolasco Sánchez Araceli Adriana</td>
-                  <td>Modelos de gestión</td>
+                  <td>Computación básica</td>
                   <td>5</td>
                   <td>2</td>
                   <td>3</td>
                 </tr>            
                 <tr>
                   <td>Rosales Galicia Miguel Ángel</td>
-                  <td>Modelos de gestión</td>
+                  <td>Computación básica</td>
                   <td>5</td>
                   <td>2</td>
                   <td>3</td>
                 </tr>                
                 <tr>
                   <td>González Gordillo Jaime</td>
-                  <td>Modelos de gestión</td>
+                  <td>Sistemas Ubicuos</td>
                   <td>5</td>
                   <td>2</td>
                   <td>3</td>
                 </tr>                
                 <tr>
                   <td>García Luna Mario</td>
-                  <td>Modelos de gestión</td>
+                  <td>Auditoria informatica</td>
                   <td>5</td>
                   <td>2</td>
                   <td>3</td>
